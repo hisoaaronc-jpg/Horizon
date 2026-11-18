@@ -85,26 +85,10 @@
         "content_extractor": "trafilatura"
       },
       {
-        "name": "Sean Goedecke",
-        "url": "https://www.seangoedecke.com/rss.xml",
+        "name": "AIHOT 日报",
+        "url": "https://aihot.news/feed/daily.xml",
         "enabled": true,
-        "category": "software-engineering",
-        "profile": "tech-blog",
-        "content_extractor": "trafilatura"
-      },
-      {
-        "name": "CNBC Finance",
-        "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000664",
-        "enabled": true,
-        "category": "finance",
-        "profile": "finance-news",
-        "content_extractor": "trafilatura"
-      },
-      {
-        "name": "GitHub Trending - Daily",
-        "url": "https://mshibanami.github.io/GitHubTrendingRSS/daily/all.xml",
-        "enabled": true,
-        "category": "github-trending",
+        "category": "ai-news",
         "profile": "tech-news"
       },
       {
@@ -112,13 +96,6 @@
         "url": "https://newsletter.semianalysis.com/feed",
         "enabled": true,
         "category": "semiconductors",
-        "profile": "tech-news"
-      },
-      {
-        "name": "LWN.net",
-        "url": "https://lwn.net/headlines/full_text?key=${LWN_KEY}",
-        "enabled": true,
-        "category": "linux-kernel",
         "profile": "tech-news"
       }
     ],
@@ -142,6 +119,24 @@
           "fetch_limit": 10,
           "min_score": 60,
           "profile": "tech-news"
+        },
+        {
+          "subreddit": "ClaudeAI",
+          "enabled": true,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 10,
+          "min_score": 60,
+          "profile": "tech-news"
+        },
+        {
+          "subreddit": "OpenAI",
+          "enabled": true,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 10,
+          "min_score": 60,
+          "profile": "tech-news"
         }
       ],
       "users": [],
@@ -157,6 +152,16 @@
           "profile": ["tech-news", "finance-news"]
         }
       ]
+    },
+    "google_news": {
+      "enabled": true,
+      "query": "Claude API pricing OR GPT API pricing OR LLM token price",
+      "language": "en",
+      "country": "US",
+      "ceid": null,
+      "max_results": 30,
+      "category": "llm-api",
+      "profile": "tech-news"
     }
   },
   "collection": {
@@ -174,7 +179,7 @@
     "default_group_limit": null
   },
   "webhook": {
-    "enabled": true,
+    "enabled": false,
     "url_env": "HORIZON_WEBHOOK_URL",
     "delivery": "summary_and_items",
     "overview_position": "last",
